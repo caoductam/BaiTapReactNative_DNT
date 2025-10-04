@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "CameraNotesApp",
+    "slug": "camera-notes-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Cho phép $(PRODUCT_NAME) truy cập camera của bạn.",
+          "microphonePermission": "Cho phép $(PRODUCT_NAME) truy cập microphone của bạn.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Cho phép $(PRODUCT_NAME) truy cập thư viện ảnh của bạn.",
+          "savePhotosPermission": "Cho phép $(PRODUCT_NAME) lưu ảnh vào thư viện của bạn.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Ứng dụng cần quyền truy cập camera để chụp ảnh.",
+        "NSPhotoLibraryUsageDescription": "Ứng dụng cần quyền truy cập thư viện ảnh để lưu và xem ảnh.",
+        "NSPhotoLibraryAddUsageDescription": "Ứng dụng cần quyền để lưu ảnh vào thư viện."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
